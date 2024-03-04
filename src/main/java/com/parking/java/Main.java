@@ -28,7 +28,8 @@ public class Main {
        TipoVehiculo.MOTO);
        carrito2.placa = "SDF 232";
        carrito2.tipoVehiculo = TipoVehiculo.MOTO;
-   
+       Vehiculo motico = new Vehiculo(null, null)
+        motico.setPlaca("XS 341");
 
        System.out.println(carrito1.placa);
        System.out.println(carrito2.tipoVehiculo);
@@ -74,12 +75,8 @@ public class Main {
          * -Fecha y hora de fin
          * -Cupo(nombre)
          */
-        System.out.println("Pago:|Placa:" + pago.vehiculo.placa + "|" );
-        System.out.println("|Valor" + pago.valor + "|");
-        System.out.println("|Fecha y hora entrada:" + 
-                            pago.fechaHoraInicio.toString() + "|");
-        System.out.println("|Cupo" + pago.cupo.nombre + "|");
-        System.out.println("|Código empleado:" + pago.empleado.codigo + "|");
+        System.out.println("Pago:|Placa:" + pago.getVehiculo().getPlaca() + "|" + "|Valor" + pago.getValor() + "|" + "|Fecha y hora entrada:" + 
+                            pago.getFechaHoraInicio().toString() + "|" + "|Cupo" + pago.getCupo().getNombre() + "|" +"|Código empleado:" + pago.getEmpleado().getCodigo() + "|");
     }
 }
     

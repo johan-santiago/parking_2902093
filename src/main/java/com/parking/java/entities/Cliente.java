@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 
 public class Cliente {
-    public String nombres;
-    public String apellidos;
-    public Long numeroIdentificacion;
-    public List<Vehiculo> misVehiculos = 
+    private String nombres;
+    private String apellidos;
+    private Long numeroIdentificacion;
+    private List<Vehiculo> misVehiculos = 
             new ArrayList<Vehiculo>();
     //definir metodo de clase
     //addCar: vincular un carrito al cliente
@@ -30,11 +30,40 @@ public Cliente(String nombres, String apellidos, Long numeroIdentificacion) {
 public void addVehicle(String placa,
                     TipoVehiculo tv){
 Vehiculo v = new Vehiculo();
-v.placa = placa;
-v.tipoVehiculo = tv;
+/*utilizando el setter de Placa
+ * para asignar valor de placa 
+ * al vehiculo
+ */
+v.setPlaca(placa);
+v.setTipoVehiculo(tv);
 this.misVehiculos.add(v);
 
 }
+public String getNombres() {
+    return nombres;
+}
+public void setNombres(String nombres) {
+    this.nombres = nombres;
+}
+public String getApellidos() {
+    return apellidos;
+}
+public void setApellidos(String apellidos) {
+    this.apellidos = apellidos;
+}
+public Long getNumeroIdentificacion() {
+    return numeroIdentificacion;
+}
+public void setNumeroIdentificacion(Long numeroIdentificacion) {
+    this.numeroIdentificacion = numeroIdentificacion;
+}
+public List<Vehiculo> getMisVehiculos() {
+    return misVehiculos;
+}
+public void setMisVehiculos(List<Vehiculo> misVehiculos) {
+    this.misVehiculos = misVehiculos;
+}
+
 
 }
 
